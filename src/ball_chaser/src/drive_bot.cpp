@@ -23,8 +23,6 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request& req, ball_chaser:
     // Publish requested velocity and angle
     motor_command_publisher.publish(motor_command);
 
-    ros::Duration(1).sleep();
-
     // Return a response message
     res.msg_feedback = "Linear Velocity set - lin.x: " + std::to_string(req.linear_x) + "  Angular Angle Set - ang.z: " + std::to_string(req.angular_z);
     ROS_INFO_STREAM(res.msg_feedback);
