@@ -1,2 +1,4 @@
 catkin_ws/build/
 catkin_ws/devel/
+catkin_ws_kinetic/build/
+catkin_ws_kinetic/devel/
