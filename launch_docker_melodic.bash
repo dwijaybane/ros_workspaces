@@ -52,6 +52,7 @@ nvidia-docker run --rm -it --init \
     --name ros_lab1 \
     -e DISPLAY \
     -e QT_X11_NO_MITSHM=1 \
+    -p 8888:8888 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v $PWD:/notebooks -w /notebooks \
     $IMAGE

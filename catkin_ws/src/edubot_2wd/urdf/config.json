@@ -1,0 +1,14 @@
+{
+    "onshape_api": "https://cad.onshape.com",
+    "onshape_access_key": "eBcTj2mS3WGQeEd4TWlBaeF6",
+    "onshape_secret_key": "RUZYhUAt3CPdHA5Ki4twe0DjIBsIVqgBJp53PMr3MxbIz3gk",
+
+    "documentId": "7b8475ed5a16cdcecc3f7d09",
+    "outputFormat": "urdf",
+    "drawFrames": false,
+    "drawCollisions": false,
+    "useScads": true,
+
+    "jointMaxEffort": 1.5,
+    "jointMaxVelocity": 22
+}

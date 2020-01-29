@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+<robot>
+    <!-- Ref: http://gazebosim.org/tutorials?tut=ros_gzplugins#Tutorial:UsingGazebopluginswithROS -->
+
+    <!-- Model Plugin -->
+    <gazebo>
+        <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+            <legacyMode>false</legacyMode>
+            <alwaysOn>true</alwaysOn>
+            <updateRate>10</updateRate>
+            <leftJoint>left_motor</leftJoint>
+            <rightJoint>right_motor</rightJoint>
+            <wheelSeparation>0.08265</wheelSeparation>
+            <wheelDiameter>0.06965</wheelDiameter>
+            <torque>0.10</torque>
+            <commandTopic>cmd_vel</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <robotBaseFrame>robot_footprint</robotBaseFrame>
+            <publishWheelTF>false</publishWheelTF>
+            <publishWheelJointState>false</publishWheelJointState>
+            <rosDebugLevel>na</rosDebugLevel>
+            <wheelAcceleration>0</wheelAcceleration>
+            <wheelTorque>0.05</wheelTorque>
+            <odometrySource>world</odometrySource>
+            <publishTf>1</publishTf>
+            <publishOdomTF>true</publishOdomTF>
+        </plugin>
+    </gazebo>
+
+    <!-- camera sensor plugin -->
+    <gazebo reference="camera">
+        <material>Gazebo/Red</material>
+        <sensor type="camera" name="camera1">
+            <update_rate>30.0</update_rate>
+            <camera name="head">
+                <!-- <horizontal_fov>1.047</horizontal_fov> -->
+                <!-- <horizontal_fov>2.79253</horizontal_fov> -->
+                <horizontal_fov>1.3962634</horizontal_fov>
+                <image>
+<!--                     <width>1280</width>
+                    <height>720</height>
+                    <format>R8G8B8</format> -->
+                    <width>800</width>
+                    <height>800</height>
+                    <format>R8G8B8</format>
+                </image>
+                <clip>
+<!--                     <near>0.01</near>
+                    <far>1</far> -->
+                    <near>0.02</near>
+                    <far>300</far>
+                </clip>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>10</updateRate>
+                <cameraName>camera</cameraName>
+                <imageTopicName>rgb/image_raw</imageTopicName>
+                <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+                <frameName>camera</frameName>
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+    <gazebo reference="base_assembly_1">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <!-- Left Motor -->
+    <gazebo reference="wheel-encoder_assembly_2">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- Right Motor -->
+    <gazebo reference="wheel-encoder_assembly_1">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+</robot>
