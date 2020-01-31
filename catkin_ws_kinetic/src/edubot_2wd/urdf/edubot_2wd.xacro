@@ -1,0 +1,1077 @@
+<?xml version='1.0'?>
+
+<robot name="edubot_2wd" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find edubot_2wd)/urdf/edubot_2wd.gazebo"/>
+
+<link name="base_assembly_1">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<link name="base_assembly_1_0_motor_support">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support.stl"/>
+</geometry>
+<material name="base_assembly_1_0_motor_support_material">
+<color rgba="0.647059 0.647059 0.647059 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support.stl"/>
+</geometry>
+<material name="base_assembly_1_0_motor_support_material">
+<color rgba="0.647059 0.647059 0.647059 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.120581 0.020618 0.0014" rpy="0 0 0"/>
+<mass value="0.000867038"/>
+<inertia ixx="1.00991e-08" ixy="9.39237e-10"  ixz="0" iyy="5.75721e-08" iyz="0" izz="6.65383e-08" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_0_motor_support_fixing" type="fixed">
+<origin xyz="0.158781 -0.0710889 -0.24573" rpy="-1.57079 -1.49607 1.57079" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_0_motor_support" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_1_motor_support_fix">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support_fix.stl"/>
+</geometry>
+<material name="base_assembly_1_1_motor_support_fix_material">
+<color rgba="0.231373 0.380392 0.705882 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support_fix.stl"/>
+</geometry>
+<material name="base_assembly_1_1_motor_support_fix_material">
+<color rgba="0.231373 0.380392 0.705882 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.114114 0.0643843 0.0014" rpy="0 0 0"/>
+<mass value="0.000375957"/>
+<inertia ixx="5.697e-09" ixy="2.13221e-09"  ixz="0" iyy="3.64143e-09" iyz="0" izz="8.84718e-09" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_1_motor_support_fix_fixing" type="fixed">
+<origin xyz="0.27572 -0.042665 -0.186442" rpy="1.64553 -1.29436e-07 3.14159" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_1_motor_support_fix" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_2_camera_chassis">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/camera_chassis.stl"/>
+</geometry>
+<material name="base_assembly_1_2_camera_chassis_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/camera_chassis.stl"/>
+</geometry>
+<material name="base_assembly_1_2_camera_chassis_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="5.87229e-19 -0.0014 0.030354" rpy="0 0 0"/>
+<mass value="0.002993"/>
+<inertia ixx="3.36266e-07" ixy="0"  ixz="0" iyy="5.21243e-07" iyz="0" izz="1.88888e-07" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_2_camera_chassis_fixing" type="fixed">
+<origin xyz="0.179606 0.0362425 -0.126733" rpy="-0.0747306 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_2_camera_chassis" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_3_htsb-m3-10-5-1">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_3_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_3_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-2.65892e-16 6.66116e-10 0.005" rpy="0 0 0"/>
+<mass value="0.00129095"/>
+<inertia ixx="1.34386e-08" ixy="0"  ixz="0" iyy="1.34386e-08" iyz="-3.44676e-15" izz="5.50858e-09" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_3_htsb-m3-10-5-1_fixing" type="fixed">
+<origin xyz="0.169106 0.0486553 -0.094881" rpy="1.49607 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_3_htsb-m3-10-5-1" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_4_spacer">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/spacer.stl"/>
+</geometry>
+<material name="base_assembly_1_4_spacer_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/spacer.stl"/>
+</geometry>
+<material name="base_assembly_1_4_spacer_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.128001 -0.00982753 0.0014" rpy="0 0 0"/>
+<mass value="0.00121635"/>
+<inertia ixx="1.86821e-08" ixy="0"  ixz="0" iyy="1.32941e-07" iyz="0" izz="1.50034e-07" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_4_spacer_fixing" type="fixed">
+<origin xyz="0.0516034 -0.168639 -0.111671" rpy="-0.0747306 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_4_spacer" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_5_encoder">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encoder.stl"/>
+</geometry>
+<material name="base_assembly_1_5_encoder_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encoder.stl"/>
+</geometry>
+<material name="base_assembly_1_5_encoder_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0168709 7.9004e-08 0.00178212" rpy="0 0 0"/>
+<mass value="0.00147569"/>
+<inertia ixx="7.31045e-08" ixy="1.4847e-12"  ixz="-1.54112e-08" iyy="7.29552e-08" iyz="5.02921e-13" izz="1.08571e-07" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_5_encoder_fixing" type="fixed">
+<origin xyz="0.16404 1.74183e-05 -0.11387" rpy="3.14159 -0.0747306 -1.5708" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_5_encoder" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_6_htsb-m3-10-5-1">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_6_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_6_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-2.65892e-16 6.66116e-10 0.005" rpy="0 0 0"/>
+<mass value="0.00129095"/>
+<inertia ixx="1.34386e-08" ixy="0"  ixz="0" iyy="1.34386e-08" iyz="-3.44676e-15" izz="5.50858e-09" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_6_htsb-m3-10-5-1_fixing" type="fixed">
+<origin xyz="0.169106 0.0495886 -0.0824159" rpy="1.49607 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_6_htsb-m3-10-5-1" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_7_base_chassis">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/base_chassis.stl"/>
+</geometry>
+<material name="base_assembly_1_7_base_chassis_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/base_chassis.stl"/>
+</geometry>
+<material name="base_assembly_1_7_base_chassis_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="6.67892e-05 -0.0115804 0.00141898" rpy="0 0 0"/>
+<mass value="0.0793419"/>
+<inertia ixx="0.000355218" ixy="3.16188e-08"  ixz="-7.7479e-10" iyy="9.42324e-05" iyz="1.4262e-07" izz="0.000449339" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_7_base_chassis_fixing" type="fixed">
+<origin xyz="0.179604 -0.0662991 -0.113718" rpy="-0.0747306 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_7_base_chassis" />
+<axis xyz="0 0 0"/>
+</joint>
+// for edubot_2wd
+<link name="base_assembly_1_8_camera">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/camera.stl"/>
+</geometry>
+<material name="base_assembly_1_8_camera_material">
+<color rgba="0.231373 0.380392 0.705882 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/camera.stl"/>
+</geometry>
+<material name="base_assembly_1_8_camera_material">
+<color rgba="0.231373 0.380392 0.705882 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.039471 -0.000916067 0.043527" rpy="0 0 0"/>
+<mass value="0.00104599"/>
+<inertia ixx="3.6693e-08" ixy="0"  ixz="0" iyy="6.55484e-08" iyz="-2.04222e-09" izz="3.72038e-08" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_8_camera_fixing" type="fixed">
+<origin xyz="0.219077 0.0465131 -0.136887" rpy="0.0747306 -1.29436e-07 3.14159" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_8_camera" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<!-- Camera Interface -->
+<link name="camera">
+    <inertial>
+        <mass value="0.1"/>
+        <origin xyz="0.0 0 0" rpy=" 0 0 0"/>
+        <inertia
+            ixx="1e-6" ixy="0" ixz="0"
+            iyy="1e-6" iyz="0"
+            izz="1e-6"
+        />
+    </inertial>
+    
+    <collision name="camera_collision">
+        <origin xyz="0.0 0 0" rpy=" 0 0 0"/>
+        <geometry>
+            <box size="0.0085 0.0025 0.0085"/>
+        </geometry>
+    </collision>
+
+    <visual name="camera_visual">
+        <origin xyz="0.0 0 0" rpy=" 0 0 0"/>
+        <geometry>
+            <box size="0.0085 0.0050 0.0085"/>
+        </geometry>     
+    </visual>
+</link>
+
+<joint name="camera_joint" type="fixed">
+    <origin xyz="0.039471 -0.000916067 0.04176" rpy="0 0 -1.57"/>
+    <child link="camera"/>
+    <parent link="base_assembly_1_8_camera"/>
+    <axis xyz="0 1 0" rpy="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_9_bomotor">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomotor.stl"/>
+</geometry>
+<material name="base_assembly_1_9_bomotor_material">
+<color rgba="1 0.937255 0.137255 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomotor.stl"/>
+</geometry>
+<material name="base_assembly_1_9_bomotor_material">
+<color rgba="1 0.937255 0.137255 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.000220082 -0.0279981 7.35227e-11" rpy="0 0 0"/>
+<mass value="0.0223517"/>
+<inertia ixx="7.11163e-06" ixy="-1.03276e-07"  ixz="2.81331e-13" iyy="1.39901e-06" iyz="6.1673e-14" izz="6.87826e-06" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_9_bomotor_fixing" type="fixed">
+<origin xyz="0.146631 -0.00983296 -0.128976" rpy="-3.06686 -1.29436e-07 3.14159" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_9_bomotor" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_10_part4assem2">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part4assem2.stl"/>
+</geometry>
+<material name="base_assembly_1_10_part4assem2_material">
+<color rgba="1 0.937255 0.137255 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part4assem2.stl"/>
+</geometry>
+<material name="base_assembly_1_10_part4assem2_material">
+<color rgba="1 0.937255 0.137255 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.0428083 -0.0015 -0.0128044" rpy="0 0 0"/>
+<mass value="0.00984795"/>
+<inertia ixx="3.8407e-07" ixy="0"  ixz="0" iyy="7.53368e-07" iyz="0" izz="3.8407e-07" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_10_part4assem2_fixing" type="fixed">
+<origin xyz="0.136796 -0.178678 -0.114931" rpy="-1.49607 -1.29436e-07 3.14159" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_10_part4assem2" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_11_camera_support">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/camera_support.stl"/>
+</geometry>
+<material name="base_assembly_1_11_camera_support_material">
+<color rgba="0.647059 0.647059 0.647059 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/camera_support.stl"/>
+</geometry>
+<material name="base_assembly_1_11_camera_support_material">
+<color rgba="0.647059 0.647059 0.647059 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0377144 -0.0014 0.0159868" rpy="0 0 0"/>
+<mass value="0.000793831"/>
+<inertia ixx="6.82045e-09" ixy="0"  ixz="0" iyy="5.19726e-08" iyz="0" izz="4.61894e-08" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_11_camera_support_fixing" type="fixed">
+<origin xyz="0.141892 0.0162274 -0.117089" rpy="-1.64553 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_11_camera_support" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_12_spacer">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/spacer.stl"/>
+</geometry>
+<material name="base_assembly_1_12_spacer_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/spacer.stl"/>
+</geometry>
+<material name="base_assembly_1_12_spacer_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.128001 -0.00982753 0.0014" rpy="0 0 0"/>
+<mass value="0.00121635"/>
+<inertia ixx="1.86821e-08" ixy="0"  ixz="0" iyy="1.32941e-07" iyz="0" izz="1.50034e-07" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_12_spacer_fixing" type="fixed">
+<origin xyz="0.0516034 -0.16843 -0.108879" rpy="-0.0747306 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_12_spacer" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_13_htsb-m3-10-5-1">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_13_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_13_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-2.65892e-16 6.66116e-10 0.005" rpy="0 0 0"/>
+<mass value="0.00129095"/>
+<inertia ixx="1.34386e-08" ixy="0"  ixz="0" iyy="1.34386e-08" iyz="-3.44676e-15" izz="5.50858e-09" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_13_htsb-m3-10-5-1_fixing" type="fixed">
+<origin xyz="0.190106 0.0486553 -0.094881" rpy="1.49607 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_13_htsb-m3-10-5-1" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_14_htsb-m3-10-5-1">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_14_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/htsb-m3-10-5-1.stl"/>
+</geometry>
+<material name="base_assembly_1_14_htsb-m3-10-5-1_material">
+<color rgba="0.647059 0.517647 0 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-2.65892e-16 6.66116e-10 0.005" rpy="0 0 0"/>
+<mass value="0.00129095"/>
+<inertia ixx="1.34386e-08" ixy="0"  ixz="0" iyy="1.34386e-08" iyz="-3.44676e-15" izz="5.50858e-09" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_14_htsb-m3-10-5-1_fixing" type="fixed">
+<origin xyz="0.190106 0.0495886 -0.0824159" rpy="1.49607 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_14_htsb-m3-10-5-1" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_15_motor_support">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support.stl"/>
+</geometry>
+<material name="base_assembly_1_15_motor_support_material">
+<color rgba="0.647059 0.647059 0.647059 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support.stl"/>
+</geometry>
+<material name="base_assembly_1_15_motor_support_material">
+<color rgba="0.647059 0.647059 0.647059 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.120581 0.020618 0.0014" rpy="0 0 0"/>
+<mass value="0.000867038"/>
+<inertia ixx="1.00991e-08" ixy="9.39237e-10"  ixz="0" iyy="5.75721e-08" iyz="0" izz="6.65383e-08" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_15_motor_support_fixing" type="fixed">
+<origin xyz="0.203228 -0.0710889 -0.24573" rpy="-1.57079 -1.49607 1.57079" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_15_motor_support" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_16_motor_support_fix">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support_fix.stl"/>
+</geometry>
+<material name="base_assembly_1_16_motor_support_fix_material">
+<color rgba="0.231373 0.380392 0.705882 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/motor_support_fix.stl"/>
+</geometry>
+<material name="base_assembly_1_16_motor_support_fix_material">
+<color rgba="0.231373 0.380392 0.705882 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.114114 0.0643843 0.0014" rpy="0 0 0"/>
+<mass value="0.000375957"/>
+<inertia ixx="5.697e-09" ixy="2.13221e-09"  ixz="0" iyy="3.64143e-09" iyz="0" izz="8.84718e-09" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_16_motor_support_fix_fixing" type="fixed">
+<origin xyz="0.0834887 -0.0398728 -0.186651" rpy="1.49607 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_16_motor_support_fix" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_17_01_base_plate">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/01_base_plate.stl"/>
+</geometry>
+<material name="base_assembly_1_17_01_base_plate_material">
+<color rgba="0.647059 0.619608 0.588235 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/01_base_plate.stl"/>
+</geometry>
+<material name="base_assembly_1_17_01_base_plate_material">
+<color rgba="0.647059 0.619608 0.588235 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-1.05806e-18 3.0561e-19 -0.0005" rpy="0 0 0"/>
+<mass value="0.00810156"/>
+<inertia ixx="9.43775e-07" ixy="0"  ixz="0" iyy="5.98899e-07" iyz="0" izz="1.54132e-06" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_17_01_base_plate_fixing" type="fixed">
+<origin xyz="0.179604 -0.165611 -0.111898" rpy="-0.0747306 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_17_01_base_plate" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_18_bomotor">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomotor.stl"/>
+</geometry>
+<material name="base_assembly_1_18_bomotor_material">
+<color rgba="1 0.937255 0.137255 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomotor.stl"/>
+</geometry>
+<material name="base_assembly_1_18_bomotor_material">
+<color rgba="1 0.937255 0.137255 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.000220082 -0.0279981 7.35227e-11" rpy="0 0 0"/>
+<mass value="0.0223517"/>
+<inertia ixx="7.11163e-06" ixy="-1.03276e-07"  ixz="2.81331e-13" iyy="1.39901e-06" iyz="6.1673e-14" izz="6.87826e-06" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_18_bomotor_fixing" type="fixed">
+<origin xyz="0.212578 -0.00983296 -0.128976" rpy="-0.0747306 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_18_bomotor" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_19_encoder">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encoder.stl"/>
+</geometry>
+<material name="base_assembly_1_19_encoder_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encoder.stl"/>
+</geometry>
+<material name="base_assembly_1_19_encoder_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0168709 7.9004e-08 0.00178212" rpy="0 0 0"/>
+<mass value="0.00147569"/>
+<inertia ixx="7.31045e-08" ixy="1.4847e-12"  ixz="-1.54112e-08" iyy="7.29552e-08" iyz="5.02921e-13" izz="1.08571e-07" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_19_encoder_fixing" type="fixed">
+<origin xyz="0.195168 1.7418e-05 -0.11387" rpy="3.14159 -0.0747306 -1.5708" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_19_encoder" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="base_assembly_1_20_mipowerbankbody">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/mipowerbankbody.stl"/>
+</geometry>
+<material name="base_assembly_1_20_mipowerbankbody_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/mipowerbankbody.stl"/>
+</geometry>
+<material name="base_assembly_1_20_mipowerbankbody_material">
+<color rgba="0.752941 0.752941 0.752941 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.000147357 -4.61541e-07 -0.00690116" rpy="0 0 0"/>
+<mass value="0.379828"/>
+<inertia ixx="0.000684854" ixy="2.31547e-09"  ixz="-3.85005e-06" iyy="0.000829888" iyz="1.31742e-08" izz="0.000157161" />
+</inertial>
+</link>
+<joint name="base_assembly_1_base_assembly_1_20_mipowerbankbody_fixing" type="fixed">
+<origin xyz="0.180187 -0.102362 -0.101692" rpy="1.49607 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="base_assembly_1_20_mipowerbankbody" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="wheel-encoder_assembly_1">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<link name="wheel-encoder_assembly_1_0_encwheel">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encwheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_1_0_encwheel_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encwheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_1_0_encwheel_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-8.9546e-19 -0.001 1.73363e-18" rpy="0 0 0"/>
+<mass value="0.000904879"/>
+<inertia ixx="4.28296e-08" ixy="0"  ixz="0" iyy="8.50959e-08" iyz="0" izz="4.28695e-08" />
+</inertial>
+</link>
+<joint name="wheel-encoder_assembly_1_wheel-encoder_assembly_1_0_encwheel_fixing" type="fixed">
+<origin xyz="0.0157 6.93889e-18 0" rpy="-1.5708 1.5708 0" />
+<parent link="wheel-encoder_assembly_1" />
+<child link="wheel-encoder_assembly_1_0_encwheel" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="wheel-encoder_assembly_1_1_bowheel">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bowheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_1_1_bowheel_material">
+<color rgba="0.101961 0.101961 0.101961 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bowheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_1_1_bowheel_material">
+<color rgba="0.101961 0.101961 0.101961 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.00113129 1.93084e-17 -1.7794e-17" rpy="0 0 0"/>
+<mass value="0.076202"/>
+<inertia ixx="5.46071e-05" ixy="0"  ixz="0" iyy="3.04745e-05" iyz="0" izz="3.04738e-05" />
+</inertial>
+</link>
+<joint name="wheel-encoder_assembly_1_wheel-encoder_assembly_1_1_bowheel_fixing" type="fixed">
+<origin xyz="-0.02535 0 2.77556e-17" rpy="0 1.83697e-16 -6.61744e-24" />
+<parent link="wheel-encoder_assembly_1" />
+<child link="wheel-encoder_assembly_1_1_bowheel" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="wheel-encoder_assembly_1_2_bomoshaft">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomoshaft.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_1_2_bomoshaft_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomoshaft.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_1_2_bomoshaft_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0178038 -4.19817e-21 8.39633e-21" rpy="0 0 0"/>
+<mass value="0.000809686"/>
+<inertia ixx="2.89511e-09" ixy="0"  ixz="0" iyy="7.95812e-08" iyz="0" izz="7.99142e-08" />
+</inertial>
+</link>
+<joint name="wheel-encoder_assembly_1_wheel-encoder_assembly_1_2_bomoshaft_fixing" type="fixed">
+<origin xyz="-0.0177 6.93889e-18 0" rpy="0 -0 -6.61744e-24" />
+<parent link="wheel-encoder_assembly_1" />
+<child link="wheel-encoder_assembly_1_2_bomoshaft" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<!-- <joint name="right_motor" type="revolute">
+<origin xyz="0.212578 -0.0214006 -0.12811" rpy="2.82985 -1.29436e-07 3.14159" />
+<parent link="base_assembly_1" />
+<child link="wheel-encoder_assembly_1" />
+<axis xyz="-1 0 0"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties friction="0.0"/>
+</joint> -->
+
+<joint name="right_motor" type="continuous">
+<origin xyz="0.212578 -0.0214006 -0.12811" rpy="2.82985 -1.29436e-07 3.14159" />
+<parent link="base_assembly_1" />
+<child link="wheel-encoder_assembly_1" />
+<axis xyz="1 0 0"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties damping="0.7" friction="100"/>
+</joint>
+
+<link name="castorswivelasm_1">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<link name="castorswivelasm_1_0_part3assem2">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part3assem2.stl"/>
+</geometry>
+<material name="castorswivelasm_1_0_part3assem2_material">
+<color rgba="0.898039 0.898039 0.898039 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part3assem2.stl"/>
+</geometry>
+<material name="castorswivelasm_1_0_part3assem2_material">
+<color rgba="0.898039 0.898039 0.898039 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.0253501 0.00290364 0.0293492" rpy="0 0 0"/>
+<mass value="0.0101735"/>
+<inertia ixx="9.61547e-07" ixy="2.46602e-11"  ixz="-1.29837e-11" iyy="1.0022e-06" iyz="1.70297e-07" izz="1.00848e-06" />
+</inertial>
+</link>
+<joint name="castorswivelasm_1_castorswivelasm_1_0_part3assem2_fixing" type="fixed">
+<origin xyz="0.02535 5.55112e-17 -0.0379251" rpy="0 -0 -4.96308e-24" />
+<parent link="castorswivelasm_1" />
+<child link="castorswivelasm_1_0_part3assem2" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="castorswivelasm_1_1_part2assem2">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part2assem2.stl"/>
+</geometry>
+<material name="castorswivelasm_1_1_part2assem2_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part2assem2.stl"/>
+</geometry>
+<material name="castorswivelasm_1_1_part2assem2_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.0253256 1.53306e-19 0.013106" rpy="0 0 0"/>
+<mass value="0.0014221"/>
+<inertia ixx="8.08232e-09" ixy="0"  ixz="0" iyy="8.08232e-09" iyz="0" izz="7.1514e-09" />
+</inertial>
+</link>
+<joint name="castorswivelasm_1_castorswivelasm_1_1_part2assem2_fixing" type="fixed">
+<origin xyz="-0.0253256 1.11022e-16 -0.0122554" rpy="0 -0 3.14159" />
+<parent link="castorswivelasm_1" />
+<child link="castorswivelasm_1_1_part2assem2" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="castorswivelasm_1_2_part7assem2">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part7assem2.stl"/>
+</geometry>
+<material name="castorswivelasm_1_2_part7assem2_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/part7assem2.stl"/>
+</geometry>
+<material name="castorswivelasm_1_2_part7assem2_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.113618 6.39574e-20 -0.0308185" rpy="0 0 0"/>
+<mass value="0.00118135"/>
+<inertia ixx="1.86174e-09" ixy="0"  ixz="0" iyy="4.01676e-08" iyz="0" izz="4.01676e-08" />
+</inertial>
+</link>
+<joint name="castorswivelasm_1_castorswivelasm_1_2_part7assem2_fixing" type="fixed">
+<origin xyz="-0.115577 -0.0200185 -0.021" rpy="-1.5708 -9.06016e-17 3.14159" />
+<parent link="castorswivelasm_1" />
+<child link="castorswivelasm_1_2_part7assem2" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="castorwheel_1">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<link name="castorwheel_1_0_castorwheel">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/castorwheel.stl"/>
+</geometry>
+<material name="castorwheel_1_0_castorwheel_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/castorwheel.stl"/>
+</geometry>
+<material name="castorwheel_1_0_castorwheel_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="5.44246e-19 -2.92195e-18 7.43539e-18" rpy="0 0 0"/>
+<mass value="0.00442636"/>
+<inertia ixx="3.67756e-07" ixy="0"  ixz="0" iyy="2.32131e-07" iyz="0" izz="2.32131e-07" />
+</inertial>
+</link>
+<joint name="castorwheel_1_castorwheel_1_0_castorwheel_fixing" type="fixed">
+<origin xyz="-2.77556e-17 -2.77556e-17 -2.77556e-17" rpy="2.1684e-19 -2.64698e-23 -2.86928e-24" />
+<parent link="castorwheel_1" />
+<child link="castorwheel_1_0_castorwheel" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<!-- <joint name="castor_wheel" type="revolute">
+<origin xyz="1.38778e-16 0.0108 -0.021" rpy="0.0735928 -9.06017e-17 -3.14159" />
+<parent link="castorswivelasm_1" />
+<child link="castorwheel_1" />
+<axis xyz="1 0 0"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="castor_swivel" type="revolute">
+<origin xyz="0.179604 -0.165909 -0.115887" rpy="0.0747306 -1.33452e-07 -3.14159" />
+<parent link="base_assembly_1" />
+<child link="castorswivelasm_1" />
+<axis xyz="0 0 1"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties friction="0.0"/>
+</joint> -->
+
+<joint name="castor_wheel" type="continuous">
+<origin xyz="1.38778e-16 0.0108 -0.021" rpy="0.0735928 -9.06017e-17 -3.14159" />
+<parent link="castorswivelasm_1" />
+<child link="castorwheel_1" />
+<axis xyz="1 0 0"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties damping="0.7" friction="100"/>
+</joint>
+
+<joint name="castor_swivel" type="continuous">
+<origin xyz="0.179604 -0.165909 -0.115887" rpy="0.0747306 -1.33452e-07 -3.14159" />
+<parent link="base_assembly_1" />
+<child link="castorswivelasm_1" />
+<axis xyz="0 0 1"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties damping="0.7" friction="100"/>
+</joint>
+
+<link name="wheel-encoder_assembly_2">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<link name="wheel-encoder_assembly_2_0_bomoshaft">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomoshaft.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_2_0_bomoshaft_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bomoshaft.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_2_0_bomoshaft_material">
+<color rgba="1 1 1 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0178038 -4.19817e-21 8.39633e-21" rpy="0 0 0"/>
+<mass value="0.000809686"/>
+<inertia ixx="2.89511e-09" ixy="0"  ixz="0" iyy="7.95812e-08" iyz="0" izz="7.99142e-08" />
+</inertial>
+</link>
+<joint name="wheel-encoder_assembly_2_wheel-encoder_assembly_2_0_bomoshaft_fixing" type="fixed">
+<origin xyz="-0.0177 3.46945e-18 0" rpy="-2.1684e-19 -0 9.82277e-25" />
+<parent link="wheel-encoder_assembly_2" />
+<child link="wheel-encoder_assembly_2_0_bomoshaft" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="wheel-encoder_assembly_2_1_encwheel">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encwheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_2_1_encwheel_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/encwheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_2_1_encwheel_material">
+<color rgba="1 0 0 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-8.9546e-19 -0.001 1.73363e-18" rpy="0 0 0"/>
+<mass value="0.000904879"/>
+<inertia ixx="4.28296e-08" ixy="0"  ixz="0" iyy="8.50959e-08" iyz="0" izz="4.28695e-08" />
+</inertial>
+</link>
+<joint name="wheel-encoder_assembly_2_wheel-encoder_assembly_2_1_encwheel_fixing" type="fixed">
+<origin xyz="0.0157 0 0" rpy="-1.5708 1.5708 0" />
+<parent link="wheel-encoder_assembly_2" />
+<child link="wheel-encoder_assembly_2_1_encwheel" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="wheel-encoder_assembly_2_2_bowheel">
+<visual>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bowheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_2_2_bowheel_material">
+<color rgba="0.101961 0.101961 0.101961 1.0"/>
+</material>
+</visual>
+<collision>
+<geometry>
+<mesh filename="package://edubot_2wd/urdf/bowheel.stl"/>
+</geometry>
+<material name="wheel-encoder_assembly_2_2_bowheel_material">
+<color rgba="0.101961 0.101961 0.101961 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="-0.00113129 1.93084e-17 -1.7794e-17" rpy="0 0 0"/>
+<mass value="0.076202"/>
+<inertia ixx="5.46071e-05" ixy="0"  ixz="0" iyy="3.04745e-05" iyz="0" izz="3.04738e-05" />
+</inertial>
+</link>
+<joint name="wheel-encoder_assembly_2_wheel-encoder_assembly_2_2_bowheel_fixing" type="fixed">
+<origin xyz="-0.02535 3.46945e-18 0" rpy="-2.1684e-19 1.11022e-16 -1.11022e-16" />
+<parent link="wheel-encoder_assembly_2" />
+<child link="wheel-encoder_assembly_2_2_bowheel" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<!-- <joint name="left_motor" type="revolute">
+<origin xyz="0.146631 -0.0214006 -0.12811" rpy="-0.00113855 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="wheel-encoder_assembly_2" />
+<axis xyz="-1 0 0"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties friction="0.0"/>
+</joint> -->
+
+<joint name="left_motor" type="continuous">
+<origin xyz="0.146631 -0.0214006 -0.12811" rpy="-0.00113855 1.29436e-07 -9.69083e-09" />
+<parent link="base_assembly_1" />
+<child link="wheel-encoder_assembly_2" />
+<axis xyz="-1 0 0"/>
+<limit effort="1.5" velocity="22" />
+<joint_properties damping="0.7" friction="100"/>
+</joint>
+
+</robot>
