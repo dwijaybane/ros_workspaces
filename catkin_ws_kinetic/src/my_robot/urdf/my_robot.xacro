@@ -177,6 +177,16 @@
         <axis xyz="0 1 0" rpy="0 0 0"/>
     </joint>
 
+    <!-- Upgrade to RGB-D camera using following code -->
+    <joint name="camera_optical_joint" type="fixed">
+        <origin xyz="0.2 0 0" rpy="-1.5707 0 -1.5707"/>
+        <parent link="camera"/>
+        <child link="camera_link_optical"/>
+    </joint>
+
+    <link name="camera_link_optical">
+    </link>
+
 
     <!-- Hokuyo LiDAR Interface -->
     <link name="hokuyo">
